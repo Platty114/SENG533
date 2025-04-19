@@ -1,0 +1,23 @@
+httperf --timeout=1 --client=0/1 --server=ec2-99-79-74-226.ca-central-1.compute.amazonaws.com --port=80 --uri=/ --rate=400 --send-buffer=4096 --recv-buffer=16384 --ssl-protocol=auto --num-conns=4000 --num-calls=1
+Maximum connect burst length: 1
+
+Total: connections 4000 requests 3233 replies 2695 test-duration 10.205 s
+
+Connection rate: 392.0 conn/s (2.6 ms/conn, <=522 concurrent connections)
+Connection time [ms]: min 114.3 avg 434.1 max 1514.3 median 302.5 stddev 325.3
+Connection time [ms]: connect 261.8
+Connection length [replies/conn]: 1.000
+
+Request rate: 316.8 req/s (3.2 ms/req)
+Request size [B]: 104.0
+
+Reply rate [replies/s]: min 191.6 avg 254.3 max 317.0 stddev 88.7 (2 samples)
+Reply time [ms]: response 213.1 transfer 0.0
+Reply size [B]: header 249.0 content 115.0 footer 0.0 (total 364.0)
+Reply status: 1xx=0 2xx=2695 3xx=0 4xx=0 5xx=0
+
+CPU time [s]: user 9.89 system 0.28 (user 96.9% system 2.8% total 99.7%)
+Net I/O: 126.1 KB/s (1.0*10^6 bps)
+
+Errors: total 1305 client-timo 1305 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
